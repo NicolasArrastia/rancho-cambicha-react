@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
-function App() {
+// Components
+import Header from './components/Header/Header'
+import HomePage from './components/HomePage/HomePage'
+import GalleryPage from './components/GalleryPage/GalleryPage'
+import DeliPage from './components/DeliPage/DeliPage'
+import NotFound from './components/NotFound/NotFound'
+import Footer from './components/Footer/Footer'
+
+
+// Styles
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header/>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/galeria" component={GalleryPage}/>
+          <Route path="/rancho-deli" component={DeliPage}/>
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+      <Footer/>
     </div>
-  );
+  )
 }
-
-export default App;
