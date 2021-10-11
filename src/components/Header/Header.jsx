@@ -1,19 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function Header() {
+// Styled
+import { HeaderCont, HeaderNav, LogoCont, LogoImg, LogoText, MenuBar, MenuCont, NavItem, NavUl, StyledA } from './styled'
+
+export default function Header(props) {
+
+    const [menu, setMenu] = useState(true)
+
+    function toggleMenu (){
+        setMenu(!menu)
+    }
+
     return (
-        <header>
-            <a href="/">
-                <img style={{width:'60px'}} src="./img/logo.svg" alt="Rancho Cambicha logo" />
-                <span>Rancho Cambicha</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="/galeria">Galería</a></li>
-                    <li><a href="/rancho-deli">Rancho Deli</a></li>
-                    <li><a href="/asd">404?</a></li>
-                </ul>
-            </nav>
-        </header>
+        <HeaderCont {...props}>
+            <LogoCont href="/">
+                <LogoImg src="./img/logo.svg" alt="Rancho Cambicha logo" />
+                <LogoText>Rancho Cambicha</LogoText>
+            </LogoCont>
+
+            {/* <MenuCont state={menu} onClick={ ()=> toggleMenu()}>
+                <MenuBar/>
+                <MenuBar/>
+                <MenuBar/>
+            </MenuCont> */}
+
+            <HeaderNav state={menu}>
+                <NavUl>
+                    <NavItem>
+                        <StyledA href="/galeria">Galería</StyledA>
+                    </NavItem>
+                    <NavItem>
+                        <StyledA href="/rancho-deli">Rancho Deli</StyledA>
+                    </NavItem>
+                    <NavItem>
+                        <StyledA href="/asd">404?</StyledA>
+                    </NavItem>
+                </NavUl>
+            </HeaderNav>
+        </HeaderCont>
     )
 }

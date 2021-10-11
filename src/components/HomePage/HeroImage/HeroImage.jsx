@@ -1,10 +1,13 @@
 import React, {useEffect,useState} from 'react'
 
+// Styled
+import { HeroBlack, HeroCont, HeroImg, HeroSubtitle, HeroTitle } from './styled';
+
 const LINK = 'https://rancho-cambicha-default-rtdb.firebaseio.com/background.json'
 
 export default function HeroImage() {
 
-    const [image,setImage] = useState({});
+    const [image,setImage] = useState({src:'',alt:''});
 
     useEffect(() => {
         fetch(LINK)
@@ -13,8 +16,12 @@ export default function HeroImage() {
     }, [])
 
     return (
-        <div>
-            <img title="hero image" style={{width:'200px'}} src={image.src} alt={image.alt} />
-        </div>
+        <HeroCont>
+            <HeroImg title="hero image" src={image.src} alt={image.alt} />
+            <HeroBlack>
+                <HeroTitle>Rancho Cambicha</HeroTitle>
+                <HeroSubtitle>Hay lugares donde uno se queda, y lugares que se quedan en uno</HeroSubtitle>
+            </HeroBlack>
+        </HeroCont>
     )
 }

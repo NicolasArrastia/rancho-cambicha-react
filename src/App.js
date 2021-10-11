@@ -14,17 +14,23 @@ import Footer from './components/Footer/Footer'
 
 export default function App() {
   return (
-    <div>
-      <Header/>
+    <>
       <Router>
+        <Switch>
+          <Route exact path="/"><Header homepage/></Route>
+          <Route component={Header}/>
+        </Switch>
+
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/galeria" component={GalleryPage}/>
           <Route path="/rancho-deli" component={DeliPage}/>
           <Route component={NotFound} />
         </Switch>
+
       </Router>
+
       <Footer/>
-    </div>
+    </>
   )
 }
