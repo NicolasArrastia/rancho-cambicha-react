@@ -10,8 +10,8 @@ export const PromoSect = styled.section`
 `;
 
 export const PromoCont = styled.div`
-    width: 50%;
-    margin: auto;
+    width: clamp(400px, 75%, 600px);
+    margin: 10px auto;
     overflow: hidden;
     
     border: 5px solid ${color.blue_4};

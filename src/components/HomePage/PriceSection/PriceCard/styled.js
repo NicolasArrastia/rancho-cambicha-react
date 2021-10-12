@@ -4,7 +4,7 @@ import * as color from '../../../colors'
 
 export const Container = styled.div`
     width: 250px;
-    margin: 5px;
+    margin: 5px 10px;
     overflow: hidden;
 
     border-radius: 10px;
@@ -24,21 +24,27 @@ export const Name = styled.div`
 `;
 
 export const Price = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     padding: 5px 5%;
 
     background-color: ${color.orange_2};
 
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: bold;
     &::before, &::after{
         font-size: 2rem;
     }
     &::before{
         content: 'AR$';
+        align-self: flex-start;
     }
     &::after{
         content: '/noche';
+        align-self: flex-end;
     }
 `;
 

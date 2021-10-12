@@ -24,7 +24,7 @@ export default function Promo() {
         <PromoSect>
             {promo.map((data,i)=>{
                 return(
-                    <PromoCont>
+                    <PromoCont key={i}>
                         <PromoTitle>{data.title}</PromoTitle>
                         <PromoDetail>{data.description}</PromoDetail>
                         <PromoSubtitle>{data.subtitle}</PromoSubtitle>

@@ -4,7 +4,7 @@ import React, {useEffect,useState} from 'react'
 import PriceCard from './PriceCard/PriceCard';
 
 // Styled
-import { PriceSect, FlexCont } from './styled';
+import { PriceSect, FlexCont, Title } from './styled';
 
 const LINK = 'https://rancho-cambicha-default-rtdb.firebaseio.com/houses.json'
 
@@ -21,7 +21,9 @@ export default function PriceSection() {
 
     return (
         <PriceSect>
-            
+            <Title>
+                Nuestros precios
+            </Title>
             <FlexCont>
                 {houses.map((data,i)=>{
                     return(

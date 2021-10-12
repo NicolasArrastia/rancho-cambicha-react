@@ -4,7 +4,8 @@ import styled, { css, keyframes } from "styled-components";
 import * as color from '../colors'
 
 export const HeaderCont = styled.header`
-    
+    position: relative;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,40 +68,96 @@ export const LogoText = styled.span`
     }
 `;
 
+
+
 export const HeaderNav = styled.nav`
     @media(max-width:576px){
         position: absolute;
-        width: 100%;
-        top: 0;
+        top: 100%;
         left: 0;
-        transform: translateY(50%);
+        z-index: 1000;
+
+        width: 100%;
+        /* overflow: hidden; */
     }
-    ${({state}) => state || css`
-        transform: translateY(0%);
-    `}
 
     /*  */
-    border: 1px dashed red;
+    /* border: 1px dashed red; */
 `;
+
+function menuCSS(){
+    let styles = ''
+    for(let i =0; i<=3 ; i++){
+        styles += `
+        li:nth-child(${i}){
+            opacity: 1;
+            transform: translateY(0px);
+            transition: 0.2s ease ${i*0.1+0.5}s;
+            visibility: visible;
+        }
+        `
+    }
+    return css`${styles}`
+}
+function closedMenuCSS(){
+    let styles = ''
+    for(let i =0; i<=3 ; i++){
+        styles += `
+        li:nth-child(${i}){
+            transition: 0.2s ease ${i*0.1}s;
+        }
+        `
+    }
+    return css`${styles}`
+}
+
 export const NavUl = styled.ul`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     width: 100%;
 
     @media (max-width: 576px){
         flex-direction: column;
+        
+        /* height: 0; */
+        /* min-height: 0%; */
+        /* height: 100%; */
+        
         >li:not(:last-child){
             margin-bottom: 10px;
         }
+        li{
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: .2s ease;
+            visibility: hidden;
+        }
+        ${closedMenuCSS()}
+        transition: 0.5s ease 0.5s;
+        
+        /*  */
+        /* border: 1px solid blue; */
     }
+    
+    ${({state}) => state && css`
+        padding: 15px 5%;
+        border-radius: 0 0 15px 15px;
+        &&{
+            background-color: ${({homepage})=> homepage ? `transparent` : `${color.black_3}`};
+            transition: 0.5s ease 0.2s;
+        }
+        ${menuCSS()}
+    `}
     /*  */
     /* border: 1px dashed blue; */
 `;
 export const NavItem = styled.li`
-    margin-left: 15px;
     cursor: pointer;
-
+    
+    margin-left: 25px;
+    
     &:hover{
         &::after{
             width: 100%;
@@ -125,12 +182,15 @@ export const StyledA = styled.a`
     color: ${color.white};
 `;
 
+
+
 export const MenuCont = styled.div`
     cursor: pointer;
 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    visibility: hidden;
 
     width: 40px;
     height: 40px;
@@ -140,12 +200,18 @@ export const MenuCont = styled.div`
     border-radius: 50%;
 
     transition: .4s ease-out;
+
     :active{
         background-color: ${color.black_2};
         transition: .2s ease-out;
     }
-
-
+    @media (max-width: 576px){
+        visibility: visible;
+    }
+    
+    ${({state}) => state && css`
+        transform: rotate(45deg);
+    `}
 `;
 
 export const MenuBar = styled.div`

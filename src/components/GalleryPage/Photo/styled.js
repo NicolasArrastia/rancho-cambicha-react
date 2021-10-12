@@ -1,23 +1,20 @@
 import styled from "styled-components";
 
+// Colors
+import * as color from '../../colors'
+
 export const PhotoCont = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 100%;
-
-    overflow: hidden;
+    width: 200px;
+    margin: 5px;
     border-radius: 5px;
+    overflow: hidden;
+
     box-shadow: 0 0 5px 0 black;
     background-color: #ddd;
-
-    /* Masonry Item */
-    margin: 0;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    margin-bottom: 10px;
-    break-inside: avoid;
 `;
 
 export const ImgCont = styled.div`
@@ -30,4 +27,13 @@ export const Img = styled.img`
     height: 100%;
     object-fit: cover;
     /* object-fit: contain; */
+`;
+
+export const Dark = styled.div`
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: ${color.black_4};
 `;

@@ -5,7 +5,7 @@ import { HeaderCont, HeaderNav, LogoCont, LogoImg, LogoText, MenuBar, MenuCont, 
 
 export default function Header(props) {
 
-    const [menu, setMenu] = useState(true)
+    const [menu, setMenu] = useState(false)
 
     function toggleMenu (){
         setMenu(!menu)
@@ -18,14 +18,14 @@ export default function Header(props) {
                 <LogoText>Rancho Cambicha</LogoText>
             </LogoCont>
 
-            {/* <MenuCont state={menu} onClick={ ()=> toggleMenu()}>
+            <MenuCont state={menu} onClick={ ()=> toggleMenu()}>
                 <MenuBar/>
                 <MenuBar/>
                 <MenuBar/>
-            </MenuCont> */}
+            </MenuCont>
 
             <HeaderNav state={menu}>
-                <NavUl>
+                <NavUl {...props} state={menu}>
                     <NavItem>
                         <StyledA href="/galeria">Galería</StyledA>
                     </NavItem>
