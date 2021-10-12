@@ -4,7 +4,7 @@ import * as color from '../../../colors'
 
 export const Container = styled.div`
     width: 250px;
-    margin: 5px 10px;
+    margin: 0 10px 30px;
     overflow: hidden;
 
     border-radius: 10px;
@@ -65,9 +65,15 @@ export const LinkButton = styled.a`
     
     padding: 5px 5%;
 
-    background-color: ${color.orange_2};
+    background-color: ${color.orange_3};
 
     color: ${color.black_4};
     font-size: 2rem;
     text-align: center;
+    transition: 0.3s ease;
+
+    &:hover{
+        background-color: ${color.orange_1};
+        /* transition: 0.3s ease; */
+    }
 `;

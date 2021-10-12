@@ -9,7 +9,7 @@ export const PhotoCont = styled.div`
     align-items: center;
 
     width: 200px;
-    margin: 5px;
+    margin: 5px auto;
     border-radius: 5px;
     overflow: hidden;
 

@@ -3,8 +3,9 @@ import styled from "styled-components";
 // Colors
 import * as color from '../../colors'
 
-export const Section = styled.section`
-    background-color: ${color.black_4};
+export const GalleryCont = styled.section`
+    border: 5px dotted red;
+    background-color: ${color.black_4} !important;
     color: ${color.white};
 `;
 

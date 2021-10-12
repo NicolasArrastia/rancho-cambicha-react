@@ -5,12 +5,15 @@ import HeroImage from './HeroImage/HeroImage'
 import PriceSection from './PriceSection/PriceSection'
 import Promo from './Promo/Promo'
 import GallerySection from './GallerySection/GallerySection'
+import IdealsSection from './IdealsSection/IdealsSection'
+import TipsSection from './TipsSection/TipsSection'
 
 // Styled
 import { HomeCont } from './styled'
 
 // Colors
 import * as colors from '../colors'
+import AboutSection from './AboutSection/AboutSection'
 
 function ColorTest(props){
     const color = props.color;
@@ -23,7 +26,12 @@ export default function HomePage() {
     return (
         <HomeCont>
             <HeroImage/>
+
             <Promo/>
+            <AboutSection/>
+            <IdealsSection/>
+            <TipsSection/>
+
             <PriceSection/>
             <GallerySection/>
 

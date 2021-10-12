@@ -1,12 +1,18 @@
 import React from 'react'
 
 // Styled
-import { Section, Title } from './styled'
+import { GalleryCont, Title } from './styled'
 
 export default function GallerySection() {
+    const fotostest = ['a','a','a','a']
     return (
-        <Section>
+        <GalleryCont>
             <Title>Galería</Title>
-        </Section>
+            {fotostest.map((data,i)=>{
+                return(
+                    <div key={i} style={{width:'80px',height:'80px',border:'1px solid white'}} />
+                )
+            })}
+        </GalleryCont>
     )
 }
