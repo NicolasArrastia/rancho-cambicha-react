@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 // Styled
-import { PromoSect, PromoCont, PromoTitle, PromoDetail, PromoSubtitle } from './styled'
+import { PromoCont, PromoTitle, PromoDetail, PromoSubtitle } from './styled'
+import * as HP from '../styled'
 
 const LINK = 'https://rancho-cambicha-default-rtdb.firebaseio.com/promo.json'
 
@@ -21,7 +22,8 @@ export default function Promo() {
     }
     else
     return (
-        <PromoSect>
+        <HP.Section>
+            <HP.Title>Nuestras promos</HP.Title>
             {promo.map((data,i)=>{
                 return(
                     <PromoCont key={i}>
@@ -31,6 +33,6 @@ export default function Promo() {
                     </PromoCont>
                 )
             })}
-        </PromoSect>
+        </HP.Section>
     )
 }

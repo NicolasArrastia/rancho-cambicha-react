@@ -4,6 +4,17 @@ import styled from "styled-components";
 import * as color from '../colors'
 
 export const FooterCont = styled.footer`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 160px;
     padding: 15px 5%;
 
     background-color: ${color.black_4};
@@ -32,15 +43,13 @@ export const Icon = styled.li`
 `;
 
 export const Developer = styled.a`
-    display: inline-block;
 
-    width: 100%;
     padding: 10px;
     
     text-align: center;
     color: ${color.white};
 
-    border: 5px dotted red;
+    border: 1px dotted red;
 `;
 
 export const CopyRight = styled.div`

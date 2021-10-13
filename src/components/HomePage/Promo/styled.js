@@ -14,9 +14,9 @@ export const PromoCont = styled.div`
     margin: 10px auto;
     overflow: hidden;
     
-    border: 5px solid ${color.blue_4};
+    border: 5px solid ${color.watergreen_4};
     border-radius: 20px 0 20px 0;
-    background-color: ${color.blue_2};
+    background-color: ${color.watergreen_2};
 
     @media (max-width: 576px){
         width: 100%;
@@ -31,7 +31,7 @@ export const PromoTitle = styled.h2`
     width: 100%;
     padding: 5px 5%;
     
-    background-color: ${color.blue_3};
+    background-color: ${color.watergreen_3};
 
     text-align: center;
     color: ${color.white};
@@ -49,6 +49,6 @@ export const PromoSubtitle = styled.span`
     width: 100%;
     text-align: center;
     font-size: 1.4rem;
-    color: ${color.blue_1};
+    color: ${color.watergreen_1};
     padding: 5px 5%;
 `;

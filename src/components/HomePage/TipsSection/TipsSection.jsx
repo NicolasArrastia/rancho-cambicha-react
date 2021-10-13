@@ -7,7 +7,7 @@ import { Item, List } from './styled'
 export default function TipsSection() {
     return (
         <Section>
-            <Title>Vacaciones sustentables en Rancho Cambicha</Title>
+            <Title>Vacaciones sustentables</Title>
             <List>
                 <Item>
                     <p>Por respeto a los lugares que visitas, lleva tu basura de vuelta.</p>

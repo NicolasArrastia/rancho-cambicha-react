@@ -6,19 +6,25 @@ import * as color from '../../colors'
 export const List = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    border: 1px solid blue;
+    justify-content: space-around;
 `;
 
 export const Item = styled.li`
-    width: 300px;
-    height: 200px;
-    padding: 20px;
-    margin: 20px auto;
+    display: flex;
+    align-items: center;
 
-    border: 5px solid ${color.green_4};
+    width: 300px;
+    /* height: 200px; */
+    padding: 20px 10px;
+    margin: 10px;
+
+    border: 5px solid ${color.green_5};
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
 
-    background-color: ${color.green_3};
+    background-color: ${color.green_2};
+
+    p{
+        font-size: 2rem;
+    }
 `;

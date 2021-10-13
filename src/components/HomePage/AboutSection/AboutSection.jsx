@@ -1,19 +1,19 @@
 import React from 'react'
 
-import { Section, Title, Text } from '../styled'
+import * as HP from '../styled'
 
 export default function AboutSection() {
     return (
-        <Section>
-            <Title>
+        <HP.Section>
+            <HP.Title>
                 ¿Quiénes somos?
-            </Title>
-            <Text>
+            </HP.Title>
+            <HP.Text>
                 Somos un grupo de personas apasionados por las dos ruedas y la vida simple.
-            </Text>
-            <Text>
+            </HP.Text>
+            <HP.Text>
                 Este proyecto empezó como un sueño y hoy lo estamos logrando en un hermoso lugar de Buenos Aires, General Juan Madariaga.
-            </Text>
-        </Section>
+            </HP.Text>
+        </HP.Section>
     )
 }

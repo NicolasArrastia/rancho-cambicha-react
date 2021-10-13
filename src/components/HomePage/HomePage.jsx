@@ -7,6 +7,7 @@ import Promo from './Promo/Promo'
 import GallerySection from './GallerySection/GallerySection'
 import IdealsSection from './IdealsSection/IdealsSection'
 import TipsSection from './TipsSection/TipsSection'
+import FaqSection from './FaqSection/FaqSection'
 
 // Styled
 import { HomeCont } from './styled'
@@ -24,16 +25,18 @@ function ColorTest(props){
 
 export default function HomePage() {
     return (
-        <HomeCont>
+        <>
             <HeroImage/>
 
             <Promo/>
             <AboutSection/>
             <IdealsSection/>
             <TipsSection/>
+            <FaqSection/>
 
-            <PriceSection/>
+
             <GallerySection/>
+            <PriceSection/>
 
             <section>
                 <ColorTest color={colors.orange_1}/>
@@ -67,7 +70,7 @@ export default function HomePage() {
                 <ColorTest color={colors.black_4}/>
             </section>
 
-        </HomeCont>
+        </>
     )
 }
 

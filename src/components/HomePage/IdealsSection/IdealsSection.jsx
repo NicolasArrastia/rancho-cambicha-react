@@ -2,15 +2,15 @@ import React from 'react'
 
 // Styled
 import { Item } from './styled'
-import { Section, Title } from '../styled'
+import * as HP from '../styled'
 
 
 export default function IdealsSection() {
     return (
-        <Section>
-            <Title>
+        <HP.Section>
+            <HP.Title>
                 Nuestros ideales
-            </Title>
+            </HP.Title>
             <ul>
                 <Item>
                     <h3>Ecoturismo</h3>
@@ -25,6 +25,6 @@ export default function IdealsSection() {
                     <p>El Turismo Sustentable es una actividad comprometida a hacer un bajo impacto sobre el medio ambiente y la cultura local, al tiempo que contribuye a generar ingresos y empleo para la población.</p>
                 </Item>
             </ul>
-        </Section>
+        </HP.Section>
     )
 }

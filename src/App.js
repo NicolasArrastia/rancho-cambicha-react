@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import GlobalStyle from './gobalStyles'
 
 // Components
 import Header from './components/Header/Header'
@@ -10,23 +11,24 @@ import NotFound from './components/NotFound/NotFound'
 import Footer from './components/Footer/Footer'
 
 
-// Styles
-
 export default function App() {
   return (
     <>
+      <GlobalStyle/>
       <Router>
         <Switch>
           <Route exact path="/"><Header homepage/></Route>
           <Route component={Header}/>
         </Switch>
 
-        <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/galeria" component={GalleryPage}/>
-          <Route path="/rancho-deli" component={DeliPage}/>
-          <Route component={NotFound} />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/galeria" component={GalleryPage}/>
+            <Route path="/rancho-deli" component={DeliPage}/>
+            <Route component={NotFound} />
+          </Switch>
+        </main>
 
       </Router>
 

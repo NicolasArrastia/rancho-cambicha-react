@@ -4,12 +4,17 @@ import styled from "styled-components";
 import * as color from '../../colors'
 
 export const PhotoCont = styled.div`
+    cursor: pointer;
+    
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 200px;
-    margin: 5px auto;
+    width: 300px;
+    height: 300px;
+    margin: 20px 5px;
     border-radius: 5px;
     overflow: hidden;
 
@@ -30,10 +35,16 @@ export const Img = styled.img`
 `;
 
 export const Dark = styled.div`
-    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    
+    /* display: flex; */
+    display: none;
 
     width: 100%;
     height: 100%;
 
-    background-color: ${color.black_4};
+    background-color: ${color.black_1};
 `;
