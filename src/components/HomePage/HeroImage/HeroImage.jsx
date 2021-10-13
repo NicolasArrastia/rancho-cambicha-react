@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from 'react'
+import React from 'react'
 
 // Styled
 import { HeroBlack, HeroCont, HeroImg, HeroSubtitle, HeroTitle } from './styled';

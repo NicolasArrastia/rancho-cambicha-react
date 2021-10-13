@@ -10,7 +10,6 @@ import TipsSection from './TipsSection/TipsSection'
 import FaqSection from './FaqSection/FaqSection'
 
 // Styled
-import { HomeCont } from './styled'
 
 // Colors
 import * as colors from '../colors'

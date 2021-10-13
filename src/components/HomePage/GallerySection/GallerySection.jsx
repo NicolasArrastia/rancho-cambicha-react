@@ -1,13 +1,10 @@
 import React from 'react'
 
 // Styled
-import { GalleryCont, Title } from './styled'
 import * as HP from '../styled'
 import * as SC from './styled'
 
-import * as color from '../../colors'
-
-const ALBUM = 'https://photos.app.goo.gl/7uZvjzVafkNFjGdt9'
+// const ALBUM = 'https://photos.app.goo.gl/7uZvjzVafkNFjGdt9'
 
 export default function GallerySection() {
     const fotostest = [
