@@ -27,13 +27,13 @@ export default function Header(props) {
             <HeaderNav state={menu}>
                 <NavUl {...props} state={menu}>
                     <NavItem>
-                        <StyledA href="/galeria">Galería</StyledA>
+                        <StyledA href="/">Inicio</StyledA>
+                    </NavItem>
+                    <NavItem>
+                        <StyledA href="https://photos.app.goo.gl/7uZvjzVafkNFjGdt9">Galería</StyledA>
                     </NavItem>
                     <NavItem>
                         <StyledA href="/rancho-deli">Rancho Deli</StyledA>
-                    </NavItem>
-                    <NavItem>
-                        <StyledA href="/asd">404?</StyledA>
                     </NavItem>
                 </NavUl>
             </HeaderNav>

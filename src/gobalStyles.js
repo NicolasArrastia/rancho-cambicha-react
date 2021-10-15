@@ -31,6 +31,9 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.6rem;
         list-style: none;
         text-decoration: none;
+
+
+        user-select: none;
     }
 
     code {

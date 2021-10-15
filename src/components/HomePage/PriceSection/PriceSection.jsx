@@ -32,6 +32,11 @@ export default function PriceSection() {
                     )
                 })}
             </SC.FlexCont>
+            <SC.Offer>
+                <SC.OfferTitle>¡Oferta especial!</SC.OfferTitle>
+                <SC.OfferDesc>¡Pagando una noche en Rancho Cambicha te llevas otra noche gratis!</SC.OfferDesc>
+                <SC.OfferLittle>La oferta solo es válida una vez por año y en temporada baja</SC.OfferLittle>
+            </SC.Offer>
         </HP.Section>
     )
 }

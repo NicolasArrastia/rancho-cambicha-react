@@ -18,11 +18,11 @@ export const Item = styled.li`
     padding: 20px 10px;
     margin: 10px;
 
-    border: 5px solid ${color.orange_5};
+    border: 5px solid ${color.green_5};
     border-top-left-radius: 50px;
     border-bottom-right-radius: 50px;
 
-    background-color: ${color.orange_2};
+    background-color: ${color.green_2};
 
     p{
         font-size: 2rem;

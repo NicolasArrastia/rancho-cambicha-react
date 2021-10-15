@@ -63,7 +63,7 @@ export const LogoText = styled.span`
     font-size: 2.4rem;
     margin-left: 15px;
 
-    @media (max-width: 576px){
+    @media (max-width: 768px){
         display:none;
     }
 `;
@@ -196,7 +196,6 @@ export const MenuCont = styled.div`
     height: 40px;
     padding: 8px;
 
-    /* border: 1px solid red; */
     border-radius: 50%;
 
     transition: .4s ease-out;
@@ -210,7 +209,18 @@ export const MenuCont = styled.div`
     }
     
     ${({state}) => state && css`
-        transform: rotate(45deg);
+        > :nth-child(1){
+            width: 60%;
+            transform: rotate(-45deg) translate(3px,9px);
+        }
+        > :nth-child(2){
+            transform: rotate(45deg);
+        }
+        > :nth-child(3){
+            width: 60%;
+            /* opacity: 0.2; */
+            transform: rotate(-45deg) translate(4px,-2px);
+        }
     `}
 `;
 
@@ -219,4 +229,7 @@ export const MenuBar = styled.div`
     height: 20%;
     background-color: ${color.white};
     border-radius: 100px;
+
+
+    transition: 0.1s ease-in;
 `;

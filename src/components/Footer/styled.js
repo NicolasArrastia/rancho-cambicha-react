@@ -36,7 +36,7 @@ export const Icon = styled.li`
     border-radius: 5px;
     /* overflow: hidden; */
 
-    > *{
+    a,img{
         width: 100%;
         height: 100%;
     }

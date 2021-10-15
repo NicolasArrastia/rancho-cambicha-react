@@ -13,7 +13,11 @@ export const Title = styled.div`
     color: ${color.black_2};
 `;
 export const Subtitle = styled.h2`
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
-    color: ${color.black_2}
+    color: ${color.black_2};
+    a {
+        color: ${color.blue_2};
+        font-size: 2rem;
+    }
 `;
